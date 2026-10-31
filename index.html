@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aziz Agrebi — Projects</title>
+<meta name="description" content="Portfolio of Aziz Agrebi: Forma, an AI body-coach web app, and Crystal Rush Simulator, a Roblox game.">
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #171a21;
+    --line: #262b36;
+    --text: #e8eaf0;
+    --muted: #9aa3b5;
+    --accent: #5b8cff;
+    --accent2: #34d399;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header { padding: 80px 0 48px; border-bottom: 1px solid var(--line); }
+  .tag {
+    display: inline-block; font-size: 13px; color: var(--accent2);
+    border: 1px solid rgba(52,211,153,.35); border-radius: 999px;
+    padding: 4px 12px; margin-bottom: 20px;
+  }
+  h1 { font-size: clamp(32px, 6vw, 48px); line-height: 1.15; letter-spacing: -0.02em; }
+  .intro { color: var(--muted); font-size: 18px; max-width: 640px; margin-top: 16px; }
+  .links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 18px; border-radius: 10px; text-decoration: none;
+    font-size: 15px; font-weight: 600; border: 1px solid var(--line);
+    color: var(--text); background: var(--card); transition: border-color .2s, transform .2s;
+  }
+  .btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  /* Sections */
+  section { padding: 56px 0; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 24px; }
+
+  /* Project cards */
+  .project {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    overflow: hidden; margin-bottom: 32px;
+  }
+  .media {
+    aspect-ratio: 16 / 9; background: #0b0d11; display: flex;
+    align-items: center; justify-content: center; color: var(--muted);
+    font-size: 14px; border-bottom: 1px solid var(--line);
+  }
+  .media img, .media iframe { width: 100%; height: 100%; object-fit: cover; border: 0; display: block; }
+  .body { padding: 28px; }
+  .project h3 { font-size: 24px; letter-spacing: -0.01em; }
+  .sub { color: var(--accent2); font-size: 14px; margin-top: 4px; }
+  .project p { color: var(--muted); margin-top: 14px; }
+  .project ul { margin: 16px 0 0 20px; color: var(--muted); }
+  .project li { margin-bottom: 6px; }
+  .project li strong { color: var(--text); font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .chip {
+    font-size: 13px; padding: 4px 10px; border-radius: 6px;
+    background: rgba(91,140,255,.12); color: #a9c1ff;
+  }
+  .project .links { margin-top: 24px; }
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 20px; }
+  .shots img { width: 100%; border-radius: 10px; border: 1px solid var(--line); display: block; }
+
+  .media.zones { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; align-items: stretch; }
+  .zone {
+    display: flex; flex-direction: column; justify-content: flex-end; gap: 4px; padding: 16px 12px;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 30%, color-mix(in srgb, var(--c) 35%, #0b0d11)),
+                radial-gradient(circle at 50% 38%, var(--c) 0 9%, transparent 10%);
+    border-right: 1px solid var(--line);
+  }
+  .zone:last-child { border-right: 0; }
+  .zone b { color: #fff; font-size: 14px; line-height: 1.2; }
+  .zone span { color: var(--c); font-size: 13px; font-weight: 600; }
+  .zone span::before { content: "🔒 "; }
+  .zone:first-child span::before { content: ""; }
+  @media (max-width: 560px) { .zone b { font-size: 11px; } .zone { padding: 10px 6px; } }
+
+  .project p.note { font-size: 14px; border-left: 3px solid var(--accent); padding-left: 12px; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .skill { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+  .skill b { display: block; margin-bottom: 6px; }
+  .skill span { color: var(--muted); font-size: 14px; }
+
+  footer { padding: 40px 0 60px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="tag">Prospective Computer Science student · Tunisia</span>
+    <h1>Hi, I'm Aziz.<br>I build things with code and AI.</h1>
+    <p class="intro">
+      I'm a high school student in the computer science track in Tunisia. I spent my last two summers
+      teaching myself web and game development, and learning to build real products with AI as my
+      coding partner. These are the projects I'm proudest of.
+    </p>
+    <div class="links">
+      <a class="btn primary" href="#projects">See projects ↓</a>
+      <!-- EDIT: put your GitHub username -->
+      <a class="btn" href="https://github.com/azizagrebi2008" target="_blank">GitHub</a>
+      <a class="btn" href="mailto:azizagrebi88@gmail.com">Email me</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <!-- ===== PROJECT 1: FORMA ===== -->
+    <article class="project">
+      <div class="media">
+        <img src="forma-screens.jpg" alt="Four screens of the Forma app: today view, body numbers, food log and AI coach chat">
+      </div>
+      <div class="body">
+        <h3>Forma — AI Body Coach</h3>
+        <div class="sub">Full-stack web app · Camera + AI · Subscriptions</div>
+        <p>
+          Forma is a fitness coach in your browser. It works out your body numbers, builds a food and
+          training plan around your goal, and includes Mo, an AI coach you can chat with. You can snap a
+          photo of your plate and Mo estimates the calories and macros.
+        </p>
+        <p class="note">
+          The demo below runs in your browser with example data (tap "Explore with example data").
+          The AI features need the server, which isn't deployed publicly yet.
+        </p>
+        <ul>
+          <li><strong>Body numbers:</strong> body fat (US Navy tape method), muscle score (FFMI), BMR, and a daily burn that recalibrates from your logs.</li>
+          <li><strong>Food camera &amp; AI scans:</strong> calories from a meal photo, and a body-fat estimate from front, side and back photos, using the Claude API.</li>
+          <li><strong>Training &amp; progress:</strong> a weekly program with exercise how-tos, a guided camera for progress photos, and a before/after slider.</li>
+          <li><strong>A real product, not just a demo:</strong> accounts and a database with row-level security so each user's data and photos stay private (Supabase), three plans with Stripe subscriptions, and daily AI limits enforced on the server so costs stay under control.</li>
+          <li><strong>Tested:</strong> server tests that run the real API code against fake Stripe, Supabase and Claude services.</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">JavaScript</span><span class="chip">HTML / CSS</span><span class="chip">Node.js serverless (Vercel)</span>
+          <span class="chip">Supabase · PostgreSQL</span><span class="chip">Stripe</span><span class="chip">Claude API (vision + chat)</span>
+        </div>
+        <div class="links">
+          <a class="btn primary" href="forma.html" target="_blank">Try the demo</a>
+          <!-- EDIT: GitHub repo link, if public -->
+          <a class="btn" href="https://github.com/azizagrebi2008/forma" target="_blank">Source code</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== PROJECT 2: CRYSTAL RUSH ===== -->
+    <article class="project">
+      <div class="media zones">
+        <!-- EDIT: you can replace this whole block with a gameplay screenshot:
+             <img src="images/crystal-rush.jpg" alt="Crystal Rush gameplay"> -->
+        <div class="zone" style="--c:#5adcff"><b>Meadow Mine</b><span>Free</span></div>
+        <div class="zone" style="--c:#c8f5ff"><b>Frost Caverns</b><span>250</span></div>
+        <div class="zone" style="--c:#ff6e1e"><b>Lava Depths</b><span>2.5K</span></div>
+        <div class="zone" style="--c:#aa46ff"><b>Void Rift</b><span>20K</span></div>
+        <div class="zone" style="--c:#ffd746"><b>Celestial Peak</b><span>150K</span></div>
+      </div>
+      <div class="body">
+        <h3>Crystal Rush Simulator (Roblox)</h3>
+        <div class="sub">Multiplayer game · Roblox Studio · Luau</div>
+        <p>
+          A mining simulator: players break crystals, sell them for coins, upgrade their pickaxe and
+          backpack, and unlock five zones, each harder and more valuable than the last. Rebirthing resets
+          progress in exchange for a permanent coin multiplier.
+        </p>
+        <ul>
+          <li><strong>World built from code:</strong> the whole map (zones, gates, rocks, crystals) is generated by script, with crystals placed so they keep their distance and never block the doorways.</li>
+          <li><strong>Cheat-resistant:</strong> the server checks every hit (distance to the crystal, cooldown, unlocked zone, bag space), so the client can't fake coins.</li>
+          <li><strong>Saving:</strong> progress is stored with DataStores, autosaves every 90 seconds, and won't overwrite a save that failed to load.</li>
+          <li><strong>Game balance in one place:</strong> all costs, health and rewards use formulas in a single config file, so the game can be rebalanced without touching the logic.</li>
+          <li><strong>Polish:</strong> HUD, floating numbers, sparks, sounds, mouse and touch controls, and optional Game Passes for monetization.</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">Roblox Studio</span><span class="chip">Luau</span><span class="chip">Client/server design</span>
+          <span class="chip">DataStores</span><span class="chip">Game economy design</span>
+        </div>
+        <div class="links">
+          <!-- EDIT: Roblox game link once published. Delete if not published. -->
+          <a class="btn primary" href="https://www.roblox.com/games/1234567890/Crystal-Rush-Simulator" target="_blank">Play on Roblox</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <h2>What I've learned</h2>
+    <div class="skills">
+      <div class="skill"><b>Full-stack web</b><span>JavaScript, serverless APIs, databases, auth and payments.</span></div>
+      <div class="skill"><b>Game development</b><span>Roblox Studio, Luau, client/server logic, game economies.</span></div>
+      <div class="skill"><b>Building with AI</b><span>Connecting AI models to real apps and using AI as a development partner.</span></div>
+      <div class="skill"><b>Next goal</b><span>A personal AI assistant that helps with health, routine and projects.</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Aziz Agrebi · <a href="mailto:azizagrebi88@gmail.com">azizagrebi88@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>

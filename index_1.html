@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aziz Agrebi — Projects</title>
-<meta name="description" content="Portfolio of Aziz Agrebi: Forma, an AI body-coach web app, and the Roblox games Egg Rush, Crystal Rush Simulator, and Obsidian Vault.">
+<meta name="description" content="Portfolio of Aziz Agrebi: Forma, an AI body-coach web app, and the Roblox games Egg Rush and Crystal Rush Simulator.">
 <style>
   :root {
     --bg: #0f1115;
@@ -146,7 +146,7 @@
           <li><strong>Body numbers:</strong> body fat (US Navy tape method), muscle score (FFMI), BMR, and a daily burn that recalibrates from your logs.</li>
           <li><strong>Food camera &amp; AI scans:</strong> calories from a meal photo, and a body-fat estimate from front, side and back photos, using the Claude API.</li>
           <li><strong>Training &amp; progress:</strong> a weekly program with exercise how-tos, a guided camera for progress photos, and a before/after slider.</li>
-          <li><strong>A real product, not just a demo:</strong> accounts and a database with row-level security so each user's data and photos stay private (Supabase), three plans with Stripe subscriptions and a real billing flow.</li>
+          <li><strong>A real product, not just a demo:</strong> accounts and a database with row-level security so each user's data and photos stay private (Supabase), three plans with Stripe subscrip[...]</li>
           <li><strong>Tested:</strong> server tests that run the real API code against fake Stripe, Supabase and Claude services.</li>
         </ul>
         <div class="chips">
@@ -179,10 +179,10 @@
           <img src="egg-rush-pets.jpg" alt="Hatch 210 pets">
         </div>
         <ul>
-          <li><strong>Big content system:</strong> 10 biomes, 15 egg rarities (Common to Transcended) and 210 pets. Every pet and egg is built from parts in code, so the game needs no imported 3D models.</li>
-          <li><strong>Guardian AI:</strong> each biome's guardian wakes up when you steal its egg and chases you at that biome's required speed. Too slow, or carrying a heavy rare egg? It catches you fast.</li>
+          <li><strong>Big content system:</strong> 10 biomes, 15 egg rarities (Common to Transcended) and 210 pets. Every pet and egg is built from parts in code, so the game needs no imported 3D mode[...]</li>
+          <li><strong>Guardian AI:</strong> each biome's guardian wakes up when you steal its egg and chases you at that biome's required speed. Too slow, or carrying a heavy rare egg? It catches you [...]</li>
           <li><strong>Player bases:</strong> each player has their own lab with incubators, a personal treadmill and a laser door that only lets its owner in (using physics collision groups).</li>
-          <li><strong>Progression &amp; economy:</strong> upgrades with growing costs, trails, potions, bats to knock eggs out of other players' hands, a pet index with first-hatch rewards, and Robux purchases.</li>
+          <li><strong>Progression &amp; economy:</strong> upgrades with growing costs, trails, potions, bats to knock eggs out of other players' hands, a pet index with first-hatch rewards, and Robux [...]</li>
           <li><strong>Safe saving:</strong> never overwrites a save that failed to load, and migrates old saves after a big update so nobody lost their collection.</li>
         </ul>
         <div class="chips">
@@ -192,37 +192,7 @@
       </div>
     </article>
 
-    <!-- ===== PROJECT 3: OBSIDIAN VAULT ===== -->
-    <article class="project">
-      <div class="media zones">
-        <div class="zone" style="--c:#8c6bff"><b>Vault Gate</b><span>Start</span></div>
-        <div class="zone" style="--c:#6be7ff"><b>Crystal Hall</b><span>250</span></div>
-        <div class="zone" style="--c:#ff7f50"><b>Forge Rooms</b><span>2K</span></div>
-        <div class="zone" style="--c:#5ce1a6"><b>Boss Lair</b><span>12K</span></div>
-        <div class="zone" style="--c:#ffd166"><b>Obsidian Core</b><span>90K</span></div>
-      </div>
-      <div class="body">
-        <h3>Obsidian Vault (Roblox)</h3>
-        <div class="sub">Dungeon crawler · Roblox Studio · Luau</div>
-        <p>
-          A dark fantasy loot game where players explore vault rooms, collect obsidian shards, defeat
-          waves of enemies, and upgrade their gear as they push deeper into the ruins.
-        </p>
-        <ul>
-          <li><strong>Procedural rooms:</strong> each run uses generated layouts, enemy spawn points and reward paths so every vault feels different.</li>
-          <li><strong>Combat loop:</strong> melee and ranged weapons, dash movement, loot drops, and boss phases with clear tells and rewards.</li>
-          <li><strong>Progression:</strong> currency, stat upgrades, relics and equipment sets that change how the run feels at higher levels.</li>
-          <li><strong>Server-authoritative rewards:</strong> the server validates room clears, enemy kills and drops so players cannot cheat their loot.</li>
-          <li><strong>Polish:</strong> UI panels, sound cues, map progression, animations and a strong loop built for replayability.</li>
-        </ul>
-        <div class="chips">
-          <span class="chip">Roblox Studio</span><span class="chip">Luau</span><span class="chip">Dungeon design</span>
-          <span class="chip">Enemy AI</span><span class="chip">Combat systems</span><span class="chip">Progression loops</span>
-        </div>
-      </div>
-    </article>
-
-    <!-- ===== PROJECT 4: CRYSTAL RUSH ===== -->
+    <!-- ===== PROJECT 3: CRYSTAL RUSH ===== -->
     <article class="project">
       <div class="media zones">
         <!-- EDIT: you can replace this whole block with a gameplay screenshot:
@@ -242,7 +212,7 @@
           progress in exchange for a permanent coin multiplier.
         </p>
         <ul>
-          <li><strong>World built from code:</strong> the whole map (zones, gates, rocks, crystals) is generated by script, with crystals placed so they keep their distance and never block the doorway.</li>
+          <li><strong>World built from code:</strong> the whole map (zones, gates, rocks, crystals) is generated by script, with crystals placed so they keep their distance and never block the doorway[...]</li>
           <li><strong>Cheat-resistant:</strong> the server checks every hit (distance to the crystal, cooldown, unlocked zone, bag space), so the client can't fake coins.</li>
           <li><strong>Saving:</strong> progress is stored with DataStores, autosaves every 90 seconds, and won't overwrite a save that failed to load.</li>
           <li><strong>Game balance in one place:</strong> all costs, health and rewards use formulas in a single config file, so the game can be rebalanced without touching the logic.</li>
